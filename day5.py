@@ -1,11 +1,7 @@
 x = float(input(""))
 
-is_even = x % 2 == 0
-is_divisible_by_3 = x % 3 == 0
-is_not_divisible_by_3 = x % 3 != 0
-
-if (is_even):
-    if (is_not_divisible_by_3):
+if (x % 2 == 0):
+    if (x % 3 != 0):
         print("B")
     else:
         print("C")
