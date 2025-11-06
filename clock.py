@@ -20,8 +20,6 @@ def coundown(seconds: int) -> None:
     end_time = time.time() + seconds
     while time.time() < end_time:
         remaining = end_time - time.time()
-        if remaining <= 0:
-            break
 
         mins, secs = divmod(int(remaining), 60)
         hours = mins // 60
