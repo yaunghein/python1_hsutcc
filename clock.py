@@ -151,22 +151,25 @@ def show_menu() -> None:
 mode = None
 
 while True:
-    show_menu()
-    mode = input("\nSelect mode (1-4): ").strip()
+    try:
+        show_menu()
+        mode = input("\nSelect mode (1-4): ").strip()
 
-    if mode == '1':
-        print("\nStarting Normal Watch...\n")
-        time.sleep(1)
-        start_normal_watch()
-    elif mode == '2':
-        start_timer()
-    elif mode == '3':
-        print("\nASCII Clock Mode - COMING SOON!")
-        print("This feature is under development...\n")
-        time.sleep(2)
-    elif mode == '4':
-        print("\n👋 Adios!\n")
-        exit()
-    else:
-        print("\nYou are gay 🫵 - Invalid choice!")
-        time.sleep(3)
+        if mode == '1':
+            print("\nStarting Normal Watch...\n")
+            time.sleep(1)
+            start_normal_watch()
+        elif mode == '2':
+            start_timer()
+        elif mode == '3':
+            print("\nASCII Clock Mode - COMING SOON!")
+            print("This feature is under development...\n")
+            time.sleep(2)
+        elif mode == '4':
+            print("\n👋 Adios!\n")
+            exit()
+        else:
+            print("\nYou are gay 🫵 - Invalid choice!")
+            time.sleep(3)
+    except KeyboardInterrupt:
+        show_menu()
